@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Card/>
+      <nuxt/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 
 </style>
