@@ -1,8 +1,8 @@
 
-$hue-color: 9;
-$primary-color: hsl($hue-color, 87%, 47%);
-$primary-darken: darken($primary-color, 5%);
-$primary-darken-2: darken($primary-color, 20%);
+$hue-color: 144;
+$primary-color: hsla($hue-color, 76%, 65%, 1);
+$primary-color-muted: hsla($hue-color, 76%, 60%, .5);
+$primary-color-darken: darken($primary-color, 20%);
 $blue-info: #0065ff;
 $green-success: #36b37e;
 $yellow-warning: #ffab00;
@@ -35,5 +35,9 @@ $display-text-size: 60px;
 $h1-text-size: 48px;
 $h2-text-size: 38px;
 $h3-text-size: 30px;
-$body-text-size: 20px;
+$body-text-size-lg: 22px;
+$body-text-size-md: 20px;
+$body-text-size-sm: 18px;
 $small-text-size: 16px;
+$text-color: #B4BACC;
+$title-color: #ECEEF2;

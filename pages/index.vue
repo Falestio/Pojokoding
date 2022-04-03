@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Card/>
+    <Welcome/>
   </div>
 </template>
 

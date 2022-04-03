@@ -1,0 +1,82 @@
+//* BODY TEXT
+@mixin body-text($size, $line-height) {
+    font-family: $font-base;
+    font-weight: 400;
+    font-size: $size;
+    color: $text-color;
+    line-height: $line-height;
+}
+
+@mixin body-text-lg {
+    @include body-text($body-text-size-lg, 72px);
+}
+
+@mixin body-text-md {
+    @include body-text($body-text-size-md, 57px);
+}
+
+@mixin body-text-sm {
+    @include body-text($body-text-size-sm, 45px);
+}
+
+
+//* HEADINGS
+@mixin heading-text($size)  {
+    font-family: $font-base;
+    font-weight: 700;
+    color: $title-color;
+    font-size: $size;
+}
+
+@mixin heading-text-lg {
+    @include heading-text($h1-text-size);
+}
+
+@mixin heading-text-md {
+    @include heading-text($h2-text-size);
+}
+
+@mixin heading-text-sm {
+    @include heading-text($h3-text-size);
+}
+    
+//* BUTTON BASE
+@mixin button {
+    cursor: pointer;
+    border-radius: 4px;
+    
+}
+
+//* BUTTON SIZE
+@mixin button-sm {
+    padding: 8px;
+}
+
+@mixin button-lg {
+    padding: 16px;
+}
+
+//* BUTTON TYPE
+@mixin button-outline{
+    border: 1px solid $primary-color;
+    background-color: transparent;
+    i {
+        color: $primary-color-muted;
+        font-size: 20px;
+    }
+    &:hover {
+        background-color: $primary-color-muted;
+        i {
+            color: $n0;
+        }
+    }
+}
+
+//* LINK
+@mixin link {
+    font-family: $font-base;
+    color: $primary-color;
+    &:hover {
+        color: $primary-color-darken;
+    }
+}

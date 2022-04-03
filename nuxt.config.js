@@ -16,6 +16,7 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Mono&family=Inter:wght@300&family=Noto+Sans&display=swap' },
+      { rel: 'stylesheet', href: 'https://unicons.iconscout.com/release/v4.0.0/css/line.css'}
     ],
   },
 
@@ -43,6 +44,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     "@nuxtjs/style-resources",
+    '@nuxt/content',
 
   ],
 
