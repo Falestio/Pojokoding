@@ -27,14 +27,14 @@ choiceOne: [
 
 # For loop pada python
 
-**Fungsi dari For loop**
-
 For pada python digunakan untuk mengeksekusi sebuah kode berulang kali
 
 For juga digunakan untuk mengiterasi sebuah barisan, seperti list, tuple , dictionary atau set
 
+**Iterasi = Pengulangan**
+
 ## For untuk iterasi list, tuple, dictionary, tuple, set
-For dapat digunakan untuk mengoperasikan kode pada setiap item didalam array.
+For dapat digunakan untuk mengoperasikan kode pada setiap item didalam list.
 
 Misal kita memiliki sebuah list angka yang berisikan angka dari 1 sampai 5 dan ingin mengimplementasikan algoritma berikut: 
 
@@ -138,12 +138,12 @@ Output
 ```
 apel
 ```
-hanya apel yang ter-output karena iterasi setelah apel adalah melon, dan di dalam kode jika ada string melon, maka perintah break dijalankan.
+hanya apel yang ter-output karena iterasi setelah apel adalah melon, dan kita membuat sebuah statement bahwa jika buah = melon, maka perintah break dijalankan.
 
 ### Continue 
 
 contoh penggunaan continue:
-diberikan sebuah list daftar_buah berisikan nama buah dan terapkan aloritma berikut
+diberikan sebuah list daftar_buah berisikan nama buah dan terapkan algoritma berikut
 
 ```
 untuk setiap buah didalam daftar_buah:
@@ -170,67 +170,49 @@ buah favorit saya
 melon
 semangka
 ```
-ketika iterasi mencapai jeruk, maka kode akan mengeksekusi kode didalam if yaitu meng-print sebuah string 'buah favorit saya', dan melanjutkan iterasi tanpa mengeksekusi kode print(buah)
+ketika iterasi mencapai jeruk, maka kode akan mengeksekusi kode didalam "if" yaitu meng-print sebuah string 'buah favorit saya', dan melanjutkan iterasi tanpa mengeksekusi kode print(buah)
 
 
 
 ## For untuk mengeksekusi kode berulang kali
 For juga bisa digunakan untuk mengeksekusi kode berulang kali, untuk melakukan nya kita akan menggunakan fungsi range()
 
-#### menggunakan fungsi range()
 misal kita ingin melakukan print sebuah string "apel" sebanyak 5 kali
 
 maka kode nya adalah 
 
 ```js 
 for i in range(5):
-	print("apel")
+	print("apel", i)
 ```
 ```
-apel
-apel
-apel
-apel
-apel
+apel 0
+apel 1
+apel 2
+apel 3
+apel 4
 ```
 
-Simpelnya, kode akan berjalan sebanyak angka yagn dimasukkan kedalam fungsi range(), tapi apa yang sebenarnya terjadi?
+Apa yang terjadi? Simpelnya, kode akan berjalan sebanyak angka yang dimasukkan kedalam fungsi range(). Angka yang dimasukkan kedalam fungsi range kita sebut _nilai berhenti_
 
-_ilustrasi_
-
-- pada kode diatas variabel i akan diberikan nilai 0 atau i = 0
-- lalu kode didalam for akan berjalan
-- setelah kode berjalan i akan ditambah satu menjadi i = 1
-- kode didalam for akan berjalan
-- begitu seterusnya sampai value i sama dengan value didalam range()
-- ketika sudah sama kode akan berhenti di eksekusi
-
+Dan bisa dilihat bahwa kita juga memunculkan variabel i kedalam output. Disini, terlihat bahwa pada iterasi pertama, i dimulai dari angka 0 -> nilai i ditambah 1 untuk setiap iterasi -> dan berhenti ketika i = 4 bukan 5, ini menunjukan bahwa **pada for loop yang menggunakan fungsi range(), iterasi akan berhenti sebelum nilai i menyamai atau melebihi nilai berhenti**
 
 Pada contoh diatas, i akan otomatis diberikan nilai 0 diawal, tapi bagaimana jika kita ingin memberikan nilai lain?
 
-Caranya dengan memasukan parameter lain pada fungsi range() 
+Caranya dengan memasukan parameter kedua pada fungsi range() 
 
 ```js
 for i in range(2,4):
-	print(i)
+	print("apel" ,i)
 ```
 ```
-2
-3
+apel 2
+apel 3
 ```
 
 Pada kode diatas i akan mulai dari angka 2 dan berhenti sebelum menjadi 4
 
 Berikut ilustrasinya 
-
-_ilustrasi_
-
-- kali ini i dimulai dari angka 2
-- kode di dalam for dieksekusi
-- i ditambah 1 menjadi 3
-- kode di dalam for dieksekusi
-- i ditambah 1 menjadi 4 
-- karena i sama dengan 4 maka kode berhenti dieksekusi
 
 Kita sudah bisa mengontrol angka inisiasi untuk i yaitu pada contoh diatas, kita memberikan angka 2, pada setiap iterasi kita menambahkan nilai 1 pada i. 
 Namun  bagaimana jika kita ingin menambahkan nilai 2? atau 3? atau bahkan melakukan operasi pengurangan?
@@ -239,7 +221,7 @@ caranya dengan menggunakan parameter ketiga pada fungsi range()
 
 ```js
 for i in range(1,10,2):
-	print(i)
+	print("apel", i)
 ```
 ```
 1
@@ -248,15 +230,9 @@ for i in range(1,10,2):
 7
 9
 ```
-pada kode diatas i dimulai dari 1 dan ditambah 2 untuk setiap iterasi, sedangkan akan berhenti sebelum menjadi angka 10
+pada kode diatas i dimulai dari 1 dan ditambah 2 untuk setiap iterasi, sedangkan akan berhenti sebelum menyamai atau melebihi angka 10
 
-- i dimulai dari angka 1
-- kode di dalam for dieksekusi
-- i ditambah 2 menjadi i = 3
-- kode didalam for dieksekusi
-- i ditambah 2 menjadi i = 5
-- seterusnya sampai i = 9
-- i ditambah 2 menjadi i = 11 
-- karena 11 lebih besar daripada 10, kode berhenti dieksekusi
+Dari beberapa contoh diatas berikut kesimpulan dari for loop mengunakan fungsi range()
+
 
 ## Survey 
