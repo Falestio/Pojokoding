@@ -29,6 +29,15 @@ export default {
       scss: ["~/assets/scss/*.scss"],
   },
 
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-a11y-dark.css'
+      }
+    }
+  },
+  
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 

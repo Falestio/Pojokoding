@@ -27,7 +27,7 @@ export default {
         @include button;
         @include button-outline;
         @include button-sm;
-        position: relative;
+        position: fixed;
         top: 1.5rem;
         left: 1.5rem;
     }

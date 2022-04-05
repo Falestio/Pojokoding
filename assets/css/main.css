@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,4 +11,50 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.nuxt-content p, li {
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+    color: #B4BACC;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.nuxt-content p, ul {
+    margin-bottom: 20px;
+}
+
+.nuxt-content h1, h2, h3 {
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+    color: #ECEEF2;
+}
+
+.nuxt-content h1 {
+    font-size: 48px;
+    margin: 24px 0;
+}
+
+.nuxt-content h2 {
+    font-size: 38px;
+    margin: 19px 0;
+}
+
+.nuxt-content h3 {
+    font-size: 28px;
+    margin: 14px 0;
+}
+
+.nuxt-content strong, b {
+    font-weight: 700;
+    color: hsla(144, 76%, 65%, 1)
+}
+
+.nuxt-content .nuxt-content-highlight pre {
+    background-color: #040a24;
+}
+
+.nuxt-content .nuxt-content-highlight code {
+    font-family: 'Fira Mono', monospace;
+    font-size: 18px;
 }

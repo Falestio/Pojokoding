@@ -3,10 +3,10 @@
         <div class="welcome__container">
             <h1 class="welcome__title">Selamat datang di Pojokoding Beta</h1>
             <p class="welcome__text">
-                Silahkan coba modul yang sudah ada berikut, jangan lupa
+                Silahkan coba modul yang sudah ada berikut dan jangan lupa
                 feedbacknya ya! 😄
             </p>
-            <NuxtLink to="/python/for" class="welcome__button"> Python: For Loop </NuxtLink>
+            <NuxtLink to="/python/for-loop" class="welcome__button"> Python: For Loop </NuxtLink>
         </div>
     </section>
 </template>
@@ -24,6 +24,7 @@ export default {}
     align-items: center;
     .welcome__container {
         margin: 0 auto;
+        text-align: center;
         .welcome__title {
             @include heading-text-lg;
         }
