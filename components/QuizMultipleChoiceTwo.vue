@@ -1,17 +1,19 @@
 <template>
     <div class="quiz">
-        <div class="question">{{ question }}</div>
+        <div class="question" v-html="question"></div>
+        <img src="~/assets/image/forloop-quiz-2.png"> 
         <div
             class="choice"
             :class="handleMultipleChoiceState(choice)"
             v-for="(choice, index) in c"
             :key="index"
             @click="handleAnswer(choice)"
-        >{{ choice.text }}</div>
+            v-html="choice.text"
+        ></div>
         <div class="discussion" v-if="answered">
             <span class="discussion-badge-correct" v-if="isCorrect">Benar!</span>
             <span class="discussion-badge-wrong" v-if="isWrong">Salah</span>
-            {{ discussion }}
+            <span v-html="discussion"></span>
         </div>
     </div>
 </template>
@@ -27,9 +29,6 @@ export default {
             answered: false,
 
         }
-    },
-    
-    computed: {
     },
 
     methods: {
@@ -49,6 +48,10 @@ export default {
                 correct: choice.isCorrect,
                 wrong: !choice.isCorrect
             }
+        },
+
+        imgSource(){
+            return require(`~/assets/image/${this.src}`)
         }
     },
 }
@@ -59,6 +62,7 @@ export default {
         padding: 1.5rem;
         border-radius: 10px;
         border: 3px solid $primary-color;
+                margin: 1.5rem 0;
         .question {
             @include body-text-md;
             border-radius: 10px;

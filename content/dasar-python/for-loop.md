@@ -19,11 +19,93 @@ choiceOne: [
 	},
 ]
 
+question-1: 'Tentukan output dari kode berikut!'
+discussion-1: "Jawaban: A. Untuk setiap angka didalam list 'jumlah', kunjungi setiap barang pada list 'barang'. artinya, setiap angka pada list 'jumlah' akan di-print bersama dengan setiap barang di list 'barang'"
+choice-1: [
+	{
+		text: "A. <br>10 kursi<br>10 meja<br>20 kursi<br>20 meja",
+		isCorrect: true,	
+	},
+	{
+		text: "B. <br>10 kursi<br>20 meja",
+		isCorrect: false,	
+	},
+]
+
+choice-2: [
+	{
+		text: "A. <br>apel<br>buah favorit<br>buah favorit<br>buah favorit",
+		isCorrect: false
+	},
+	{
+		text: "B. <br>buah favorit<br>buah favorit<br>buah favorit<br>buah favorit",
+		isCorrect: false
+	},
+	{
+		text: "C. <br>buah favorit<br>buah favorit<br>buah favorit",
+		isCorrect: true
+	},
+]
+question-2: "Tentukan output dari kode berikut!"
+discussion-2: "Jawaban: C. pertama-tama for loop akan mengiterasi buah apel, karena kondisi pada if statement terpenuhi yaitu buah = apel, maka perintah continue dijalankan, yang menyebabkan for loop diulang tanpa menjalankan kode dibawahnya. Lalu kalimat 'buah favorit' di print untuk setiap buah yang tersisa. "
+
+question-3: "Tentukan output dari kode berikut!"
+discussion-3: "Jawaban: B, Nilai i akan dimulai dari -3, lalu iterasi akan berlanjut sebelum i mencapai -7"
+choice-3: [
+	{
+		text: "A.<br>-4<br>-5<br>-6<br>-7",
+		isCorrect: false
+	},
+	{
+		text: "B.<br>-3<br>-4<br>-5<br>-6",
+		isCorrect: true
+	},
+]
+
+illustrationOneImagesData: [
+	{
+		link: 'forloop-1-1.svg',
+		desc: 'Pertama-tama list angka akan di scan oleh compiler dan disimpan di memory',
+	},
+	{
+		link: 'forloop-1-2.svg',
+		desc: 'Compiler melihat for loop, pertama-tama, variabel i akan diberi nilai pertama yang terdapat didalam list yaitu 1',
+	},
+	{
+		link: 'forloop-1-3.svg',
+		desc: 'Perintah print dijalankan, karena i = 1 maka menghasilkan output 1'
+	},
+	{
+		link: 'forloop-1-4.svg',
+		desc: 'Kode didalam for selesai dieksekusi, lanjut ke iterasi selanjutnya, variabel i diberi nilai kedua pada list angka yaitu angka 2',
+	},
+	{
+		link: 'forloop-1-5.svg',
+		desc: 'Perintah print dijalankan, karena i = 2 maka menghasilkan output 2',
+	},
+	{
+		link: 'forloop-1-6.svg',
+		desc: 'Kode didalam for selesai dieksekusi, lanjut ke iterasi selanjutnya, variabel i diberi nilai ketiga pada list angka yaitu angka 3',
+	},
+	{
+		link: 'forloop-1-7.svg',
+		desc: 'Perintah print dijalankan, karena i = 3 maka menghasilkan output 3',
+	},
+	{
+		link: 'forloop-1-8.svg',
+		desc: 'Kode didalam for selesai dieksekusi, lanjut ke iterasi selanjutnya, variabel i diberi nilai keempat pada list angka yaitu angka 4',
+	},
+	{
+		link: 'forloop-1-9.svg',
+		desc: 'Perintah print dijalankan, karena i = 4 maka menghasilkan output 4',
+	},
+	{
+		link: 'forloop-1-10.svg',
+		desc: 'Kode didalam for selesai, tidak ada iterasi berikutnya karena sudah tidak ada lagi elemen dari list angka yang harus dikunjungi',
+	},
+] 
+
 ---
-
-<quiz-multiple-choice :c="choiceOne" question="Apakah yang dapat dilaksanakan oleh kita sebagai orang baru" discussion="karena itulah jawaban yang paling benar saya tidak bisa mengulangnya lagi">
-</quiz-multiple-choice>
-
 
 # For loop pada python
 
@@ -65,21 +147,11 @@ seperti yang bisa dilihat, for loop akan mengunjungi setiap angka didalam list d
 
 berikut apa yang terjadi ketika kode dijalankan
 
-_ilustrasi_
-
-
-- for loop mengunjungi nilai pertama di dalam list
-- nilai pertama tersebut dimasukan kedalam variabel i
-- menjalankan kode di dalam for loop
-- for loop mengunjungi nilai kedua di dalam list
-- nilai kedua tersebut dimasukan kedalam variabel i
-- menjalankan kode di dalam for loop
-
+<image-slider :images-data="illustrationOneImagesData"></image-slider>
 
 Pada kode diatas, i adalah variabel yang akan menampung setiap angka di dalam list, for loop akan mengunjungi setiap angka dan memasukannya kedalam variabel i.
 
-
-kita bebas menentukan nama variabel untuk menampung nilai dari list, namun usahakan nama variabel sesuai dengan konten di dalam list
+Kita bebas menentukan nama variabel untuk menampung nilai dari list, namun usahakan nama variabel sesuai dengan konten di dalam list
 
 
 ## For untuk looping string
@@ -102,6 +174,8 @@ n
 g
 ```
 
+<quiz-multiple-choice-one :c="choice-1" :question="question-1" :discussion="discussion-1">
+</quiz-multiple-choice-one>
 
 ## Continue and Break statement
 **Break**: Hentikan loop
@@ -172,7 +246,16 @@ semangka
 ```
 ketika iterasi mencapai jeruk, maka kode akan mengeksekusi kode didalam "if" yaitu meng-print sebuah string 'buah favorit saya', dan melanjutkan iterasi tanpa mengeksekusi kode print(buah)
 
+<quiz-multiple-choice-two :c="choice-2" :question="question-2" :discussion="discussion-2"></quiz-multiple-choice-two>
 
+```js
+daftar_buah = ['apel', 'jeruk', 'melon', 'semangka']
+
+for buah in daftar buah:
+	if buah == 'apel':
+		continue
+	print("Buah Favorit")
+```
 
 ## For untuk mengeksekusi kode berulang kali
 For juga bisa digunakan untuk mengeksekusi kode berulang kali, untuk melakukan nya kita akan menggunakan fungsi range()
@@ -220,19 +303,24 @@ Namun  bagaimana jika kita ingin menambahkan nilai 2? atau 3? atau bahkan melaku
 caranya dengan menggunakan parameter ketiga pada fungsi range() 
 
 ```js
-for i in range(1,10,2):
+for i in range(5,1,-1):
 	print("apel", i)
 ```
 ```
-1
-3
-5
-7
-9
+apel 5
+apel 4
+apel 3
+apel 2
 ```
-pada kode diatas i dimulai dari 1 dan ditambah 2 untuk setiap iterasi, sedangkan akan berhenti sebelum menyamai atau melebihi angka 10
+pada kode diatas i dimulai dari 5 dan dikurangi 1 untuk setiap iterasi, sedangkan akan berhenti sebelum menyamai atau lebih kecil dari 1, artinya untuk for loop yang setiap iterasinya nilai i dikurangi, **loop akan berhenti ketika nilai mulai menyamai atau lebih kecil dari nilai akhir**
+
+## Kesimpulan For Loop menggunakan Range
 
 Dari beberapa contoh diatas berikut kesimpulan dari for loop mengunakan fungsi range()
 
+<img-container src="forloop-rangesum.svg" alt="kesimpulan range"></img-container>
+
+<quiz-multiple-choice-three :c="choice-3" :question="question-3" :discussion="discussion-3">
+</quiz-multiple-choice-three>
 
 ## Survey 

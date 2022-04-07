@@ -25,6 +25,9 @@ export default {}
     .welcome__container {
         margin: 0 auto;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         .welcome__title {
             @include heading-text-lg;
         }

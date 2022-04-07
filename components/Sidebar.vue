@@ -5,6 +5,7 @@
         </button>
         <div class="menu" :class="{'show-sidebar' :showSidebar}">
             <div class="menu__list">
+                <span to="/" class="menu__list-item" @click="showSidebar = false">X</span>
                 <NuxtLink to="/" class="menu__list-item">Home</NuxtLink>
             </div>
         </div>
