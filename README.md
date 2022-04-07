@@ -1,5 +1,8 @@
 # Welcome to Pojok Koding Source Code!  
 
+Link: pojokoding.com
+Link alternatif: pojokoding.netlify.app
+
 ### Tech Stack:
 
 Frontend: Nuxt 2 with SASS 
