@@ -1,8 +1,8 @@
 # Welcome to Pojok Koding Source Code!  
 
-Link: <pojokoding.com>
+Link: (pojokoding.com)[pojokoding.com]
 
-Link alternatif: <pjokoding.netlify.app>
+(Link alternatif)[pojokoding.netlify.app]
 
 ### Tech Stack:
 
