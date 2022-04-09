@@ -6,6 +6,7 @@
                 Silahkan coba modul yang sudah ada berikut dan jangan lupa
                 feedbacknya ya! 😄
             </p>
+            <p class="welcome__text">⬇️⬇️⬇️</p>
             <NuxtLink to="/python/for-loop" class="welcome__button"> Python: For Loop </NuxtLink>
         </div>
     </section>
