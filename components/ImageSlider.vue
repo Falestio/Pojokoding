@@ -10,9 +10,9 @@
             <img :src="imageSource(image)" class="image" />
         </div>
         <div class="buttons">
-            <span class="button-prev" @click="prev()">back</span>
+            <button class="button-prev" @click="prev()">back</button>
             <p class="pagination">{{index + 1}} / {{ imagesLength }}</p>
-            <span class="button-next" @click="next()">next</span>
+            <button class="button-next" @click="next()">next</button>
         </div>
         <p class="image-description" v-html="image.desc"></p>
     </div>

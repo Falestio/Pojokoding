@@ -280,7 +280,7 @@ Apa yang terjadi? Simpelnya, kode akan berjalan sebanyak angka yang dimasukkan k
 
 Dan bisa dilihat bahwa kita juga memunculkan variabel i kedalam output. Disini, terlihat bahwa pada iterasi pertama, i dimulai dari angka 0 -> nilai i ditambah 1 untuk setiap iterasi -> dan berhenti ketika i = 4 bukan 5, ini menunjukan bahwa **pada for loop yang menggunakan fungsi range(), iterasi akan berhenti sebelum nilai i menyamai atau melebihi nilai berhenti**
 
-Pada contoh diatas, i akan otomatis diberikan nilai 0 diawal, tapi bagaimana jika kita ingin memberikan nilai lain?
+Pada contoh diatas, variabel 'i' akan otomatis diberikan nilai 0 diawal, tapi bagaimana jika kita ingin memberikan nilai lain?
 
 Caranya dengan memasukan parameter kedua pada fungsi range() 
 
