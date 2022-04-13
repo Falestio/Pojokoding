@@ -77,6 +77,22 @@
     }
 }
 
+@mixin button-full {
+    background-color: $primary-color;
+    color: #000;
+    i {
+        color: $primary-color-muted;
+        font-size: 20px;
+    }
+    &:hover {
+        background-color: $primary-color-muted;
+        color: $n0;
+        i {
+            color: $n0;
+        }
+    }
+}
+
 //* LINK
 @mixin link {
     font-family: $font-base;

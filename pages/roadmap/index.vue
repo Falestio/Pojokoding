@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <TheNavbar/>
-      <nuxt/>
-  </div>
+    <div>
+        <RoadmapCard/>
+    </div>
 </template>
 
 <script>
