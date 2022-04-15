@@ -1,10 +1,9 @@
 <template>
     <section class="welcome" id="welcome">
         <div class="welcome__container">
-            <h1 class="welcome__title">Selamat datang di Pojokoding Beta</h1>
+            <h1 class="welcome__title">Selamat datang di Pojokoding</h1>
             <p class="welcome__text">
-                Silahkan coba modul yang sudah ada berikut dan jangan lupa
-                feedbacknya ya! 😄
+                Coba mengikuti Roadmap yang tersedia berikut
             </p>
             <p class="welcome__text">⬇️⬇️⬇️</p>
             <NuxtLink to="/python/for-loop" class="welcome__button"> Python: For Loop </NuxtLink>

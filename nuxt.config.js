@@ -55,25 +55,6 @@ export default {
     '@nuxtjs/axios',
     "@nuxtjs/style-resources",
     '@nuxt/content',
-    [
-      '@nuxtjs/firebase',
-      {
-        config: {
-          apiKey: "AIzaSyD5aegWP5_8ADUEQWXONvU6O6ck-XRkDks",
-          authDomain: "pojokoding.firebaseapp.com",
-          projectId: "pojokoding",
-          storageBucket: "pojokoding.appspot.com",
-          messagingSenderId: "28459147285",
-          appId: "1:28459147285:web:7b6b222f75d82022246e1c",
-          measurementId: "G-TFJ6XZYGRY"
-        },
-        services: {
-          auth: true, // Automatically initialize and persist the Firebase auth state, for instance when calling auth.onAuthStateChanged(...)
-          analytics: true, // Automatically initialize and persist the Firebase analytics state, for instance when calling analytics.logEvent(...)
-        }
-      }
-    ],
-
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
