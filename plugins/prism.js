@@ -6,3 +6,4 @@ import Prism from 'prismjs';
 Prism.languages.vue = Prism.languages.markup;
 
 export default Prism;
+

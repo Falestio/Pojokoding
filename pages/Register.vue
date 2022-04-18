@@ -15,6 +15,9 @@
 </template>
 
 <script>
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '~/plugins/firebase.js'
+
 export default {
     data() {
         return {
@@ -25,18 +28,22 @@ export default {
     },
 
     methods: {
-        async register() {
-            try {
-                console.log(this.email, this.password)
-                await this.$fire.auth.createUserWithEmailAndPassword(
-                    this.email,
-                    this.password
-                )
-                alert('Success adding account')
-            } catch (e) {
-                alert(e)
-                console.log(e)
-            }
+        register() {
+            createUserWithEmailAndPassword(
+                auth,
+                this.email,
+                this.password
+            )
+                .then((userCredential) => {
+                    const user = userCredential.user
+                    console.log(user);
+                    alert("Success")
+                })
+                .catch((error) => {
+                    const errorCode = error.code
+                    const errorMessage = error.message
+                    console.log(errorCode, errorMessage)
+                })
         },
     },
 }

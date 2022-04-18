@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getAuth } from "firebase/auth";
 
 var config = {
     apiKey: "AIzaSyD5aegWP5_8ADUEQWXONvU6O6ck-XRkDks",
@@ -10,19 +10,11 @@ var config = {
     appId: "1:28459147285:web:7b6b222f75d82022246e1c",
     measurementId: "G-TFJ6XZYGRY"
 };
-firebase.initializeApp(config);
 
-const db = firebase.firestore();
+const app = initializeApp(config);
 
-// date issue fix according to firebase
-const settings = {
-    timestampsInSnapshots: true
-};
-db.settings(settings);
-const auth = firebase.auth()
-
+const auth = getAuth(app)
 
 export {
-    db,
     auth
 };
