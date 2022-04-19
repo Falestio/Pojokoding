@@ -9,9 +9,8 @@
                     >Roadmap</NuxtLink
                 >
                 <NuxtLink to="/kursus" class="navbar__menu-item"
-                    >Kursus</NuxtLink
+                    >Daftar Kelas</NuxtLink
                 >
-                <NuxtLink to="/blog" class="navbar__menu-item">Blog</NuxtLink>
             </nav>
         </div>
         <div class="buttons">

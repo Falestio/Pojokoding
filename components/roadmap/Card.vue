@@ -1,5 +1,6 @@
 <template>
-    <div class="card-container container">
+<div>
+<NuxtLink class="card-container" to="/roadmap/frontend">
         <div class="card">
             <div class="card__header">
                 <div class="card__header-icon">
@@ -29,7 +30,8 @@
                 <div class="card__info-totallatihan">140 Latihan</div>
             </div>
         </div>
-    </div>
+    </NuxtLink>
+</div>
 </template>
 
 <script>
