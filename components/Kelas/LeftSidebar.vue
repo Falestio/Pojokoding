@@ -1,5 +1,5 @@
 <template>
-    <section class="sidebar" id="sidebar">
+    <section class="sidebar" id="sidebar" ref="sidebar">
         <button class="toggle" @click="showSidebar = true">
             <i class="uil uil-bars"></i>
         </button>
@@ -17,6 +17,18 @@ export default {
     data(){
         return {
             showSidebar: false,
+        }
+    },
+
+    methods: {
+        closeSidebarOnClickOutsideReach() {
+            this.sidebar.addEventListener("mouseup", )            
+        }
+    },
+
+    computed: {
+        sidebar(){
+            return document.getElementById("sidebar")
         }
     }
 }

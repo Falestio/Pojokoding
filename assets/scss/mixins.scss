@@ -120,8 +120,17 @@
 
 //* CARD
 @mixin card {
+    display: block;
     padding: 1rem;
     border-radius: 4px;
     border: 1px solid $primary-color;
-    background-color: $n800;;
+    background-color: $n800;
+}
+
+@mixin card-hover-animation {
+    transition: all .3s ease;
+    box-shadow: 0px 0px 0px 0px $primary-color;
+    &:hover {
+        box-shadow: -4px 4px 0px 0px $primary-color;
+    }
 }
