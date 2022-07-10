@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     css: [
         '~/assets/css/utils.css',
         '~/assets/css/tailwind.css',
+        '~/assets/css/components.css',
     ],
     
     link: [
@@ -14,5 +15,11 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
         '@nuxt/content'
-    ]
+    ],
+
+    content: {
+        highlight: {
+            theme: 'github-dark'
+        }
+    }
 })
