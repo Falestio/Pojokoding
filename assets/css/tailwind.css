@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.article > * {
+    @apply mb-6;
+}
+
+.article h1 {
+    @apply text-5xl font-bold mb-6;
+}
+
+.article h2 a {
+    @apply text-4xl font-bold text-gray-900;
+}
+
+.article h3 a {
+    @apply text-3xl font-bold text-gray-900;
+}
+
+.article h4 a {
+    @apply text-2xl font-bold text-gray-900;
+}
+
+.article h5 a {
+    @apply text-xl uppercase underline text-gray-900;
+}
+
+.article h6 a {
+    @apply text-lg font-bold uppercase underline text-gray-900;
+}
+
+.article p {
+    @apply mb-3 text-xl text-gray-900;
+}
+
+.article hr {
+    @apply mb-6;
+}
+
+.article a {
+    @apply text-green-500 hover:underline;
+}
+
+.article p strong {
+    @apply text-green-600;
+}
