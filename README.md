@@ -1,42 +1,22 @@
-# Nuxt 3 Minimal Starter
+# Pojokoding
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Pojokoding is a website to learn programming interactively
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Konten pemrograman berbasis text
+- Latihan koding interaktif
 
-```bash
-# yarn
-yarn install
+## Roadmap - 30 September
 
-# npm
-npm install
+- [ ] Design system 
+- [ ] Full frontend implementation
+- [ ] Full backend implementation
+- [ ] IDE
+- [ ] Konten Javascript
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+## Future Plan
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+- [ ] CLI based project examination
+- [ ] User submitted projects, exercises
+- [ ] User submitted course
