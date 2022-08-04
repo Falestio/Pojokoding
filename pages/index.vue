@@ -18,7 +18,7 @@ const daftarKategori = await queryContent("/")
         
         <template v-for="kategori in daftarKategori" :key="kategori._id">
           <NuxtLink :to="kategori.artikelPertamaPath">
-            <div class="bg-gray-50 p-4 border-2 border-gray-100 rounded">
+            <div class="bg-gray-50 p-4 border-2 border-gray-100 rounded ">
               <h2 class="text-4xl mb-2">{{kategori.title}}</h2>
 
               <div class="btn btn-sm mr-2">
