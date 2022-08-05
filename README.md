@@ -1,6 +1,6 @@
 # Pojokoding
 
-Pojokoding is a website to learn programming interactively
+Pojokoding is a website to learn programming interactively🌸🍮🍪🍪 
 
 ## Features
 
