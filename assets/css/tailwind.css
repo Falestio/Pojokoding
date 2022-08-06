@@ -12,27 +12,27 @@
 }
 
 .article h2 a {
-    @apply text-4xl font-bold text-gray-900;
+    @apply text-4xl font-bold;
 }
 
 .article h3 a {
-    @apply text-3xl font-bold text-gray-900;
+    @apply text-3xl font-bold;
 }
 
 .article h4 a {
-    @apply text-2xl font-bold text-gray-900;
+    @apply text-2xl font-bold;
 }
 
 .article h5 a {
-    @apply text-xl uppercase underline text-gray-900;
+    @apply text-xl uppercase underline;
 }
 
 .article h6 a {
-    @apply text-lg font-bold uppercase underline text-gray-900;
+    @apply text-lg font-bold uppercase underline;
 }
 
 .article p {
-    @apply mb-3 text-xl text-gray-900;
+    @apply mb-3 text-xl;
 }
 
 .article hr {
@@ -40,9 +40,9 @@
 }
 
 .article a {
-    @apply text-green-500 hover:underline;
+    @apply hover:underline;
 }
 
-.article p strong {
-    @apply text-green-600;
+.article pre {
+    @apply bg-slate-800 p-4 rounded;
 }

@@ -20,7 +20,7 @@ const daftarSemuaArtikel = await queryContent(`/${route.params.namakategori}`)
             </div> 
             <div class="drawer-side">
                 <label for="my-drawer-2" class="drawer-overlay"></label> 
-                <ul class="menu bg-gray-50 p-4 overflow-y-auto w-64 text-base-content">
+                <ul class="menu border-r-2 border-slate-700 p-4 overflow-y-auto w-64 text-base-content">
                     <li>
                         <NuxtLink to="/" class="text-2xl font-bold">Pojokoding</NuxtLink>
                     </li>
@@ -49,8 +49,9 @@ const daftarSemuaArtikel = await queryContent(`/${route.params.namakategori}`)
     height: auto;
 }
 
+/* cyan 500 */
 .router-link-exact-active {
-    color: seagreen;
+    color: #0ea5e9; 
     text-decoration: underline;
     text-underline-offset: 4px;
 }
