@@ -6,6 +6,12 @@ const daftarSemuaArtikel = await queryContent(`/${route.params.namakategori}`)
     .where({_partial: false})
     .find()
 
+//TODO: query semua konten python
+//TODO: bedakan mode yang ditampilkan antara latihan atau artikel
+//TODO: query soal dan solusi secara terpisah
+//TODO: experiment running javascript on the browser
+//TODO: figure out testing
+
 </script>
 
 <template>

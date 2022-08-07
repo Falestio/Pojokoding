@@ -39,4 +39,5 @@ const daftarKategori = await queryContent("/")
       </div>
     </div>
   </div>
+
 </template>
