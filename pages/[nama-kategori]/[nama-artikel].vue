@@ -6,11 +6,23 @@ const daftarSemuaArtikel = await queryContent(`/${route.params.namakategori}`)
     .where({_partial: false})
     .find()
 
-//TODO: query semua konten python
+/*
+NOTE: pisah branch development static content dengan development fullstack app
+
+Static contents: Blog, Navigasi, SEO
+Fullstack: all static, IDE, Auth, Payment, User progress,
+
+ */
+
+//TODO: pisah branch master = static content dan fullstack-dev
+//TODO: test kebenaran query
+    // - apakah konten sesuai dengan path
+    // - ignored content harus tidak bisa diakses, karena user tidak boleh mengakses solusi sebelum benar menjawab
 //TODO: bedakan mode yang ditampilkan antara latihan atau artikel
 //TODO: query soal dan solusi secara terpisah
 //TODO: experiment running javascript on the browser
 //TODO: figure out testing
+//TODO: use pinia to decoupled methods
 
 </script>
 
