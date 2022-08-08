@@ -37,8 +37,9 @@ console.log(isLatihan);
     height: auto;
 }
 
+/* cyan 500 */
 .router-link-exact-active {
-    color: seagreen;
+    color: #0ea5e9; 
     text-decoration: underline;
     text-underline-offset: 4px;
 }

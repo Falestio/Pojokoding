@@ -1,11 +1,11 @@
 # Pojokoding
 
-Pojokoding is a website to learn programming interactively
+Pojokoding is a website to learn programming interactively🌸🍮🍪🍪 
 
 ## Features
 
-- Konten pemrograman berbasis text
-- Latihan koding interaktif
+- Text-based programming content 
+- interactive coding exercise
 
 ## Roadmap - 30 September
 
