@@ -7,13 +7,31 @@ Pojokoding is a website to learn programming interactively🌸🍮🍪🍪
 - Text-based programming content 
 - interactive coding exercise
 
-## Roadmap - 30 September
+## Roadmap - 30 September - Pojokoding 1.0.0
 
-- [ ] Design system 
+- [x] Design system 
 - [ ] Full frontend implementation
+    - [ ] Article UI optimization
+    - [ ] Homepage
+    - [ ] Login and Register page
+    - [ ] Payment page
+    - [ ] Article comment UI
+    - [ ] practice discussion UI 
+    - [ ] IDE UI optimization
+    - [ ] User related UI 
+    - [ ] SEO optimization
+- [ ] Konten Dasar Javascript
 - [ ] Full backend implementation
+    - [ ] Auth
+    - [ ] User progress
+    - [ ] Payment
+    - [ ] Article comment
+    - [ ] Practice discussion
 - [ ] IDE
-- [ ] Konten Javascript
+    - [x] Handle API Request
+    - [x] Solution
+    - [ ] Testing
+    - [ ] Completion
 
 ## Future Plan
 
