@@ -93,9 +93,9 @@ function membukaSolusi() {
     bukaSolusi.value = true;
 }
 
-const props = defineProps(['allArticleWithTheSameCategory', 'currentContentPath']);
+const props = defineProps(['allArticleWithTheSameCategory', 'currentContentPath', 'currentContent']);
 
-const soal = await queryContent(props.currentContentPath).findOne()
+const solusi = await queryContent(props.currentContentPath).where({_partial: true}).findOne()
 
 </script>
 
@@ -134,7 +134,7 @@ const soal = await queryContent(props.currentContentPath).findOne()
                 </div>
 
                 <div class="p-6 flex flex-col gap-4" :class="{ hidden: !bukaSoal }">
-                    <ContentRenderer :value="soal"/>
+                    <ContentRenderer :value="currentContent"/>
                 </div>
 
                 <div class="p-6" :class="{ hidden: !bukaOutput }">

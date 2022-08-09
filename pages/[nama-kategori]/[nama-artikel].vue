@@ -6,7 +6,7 @@ const allArticleWithTheSameCategory = await queryContent(`/${route.params.namaka
     .where({_partial: false})
     .find()
 
-const currentContent = await queryContent(route.path).findOne()
+const currentContent = await queryContent(route.path).where({ _partial: false }).findOne()
 const currentContentPath = currentContent._path
 const isLatihan = currentContent.latihan
 console.log(isLatihan);
@@ -22,6 +22,7 @@ console.log(isLatihan);
         ></CourseArticle>
         <Ide
             v-if="isLatihan"
+            :currentContent="currentContent"
             :currentContentPath="currentContentPath"
             :allArticleWithTheSameCategory="allArticleWithTheSameCategory"
         ></Ide>
