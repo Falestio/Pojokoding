@@ -11,14 +11,14 @@ Pojokoding is a website to learn programming interactively🌸🍮🍪🍪
 
 - [x] Design system 
 - [ ] Full frontend implementation
-    - [ ] Article UI optimization
-    - [ ] Homepage
+    - [x] Article UI optimization
     - [ ] Login and Register page
     - [ ] Payment page
     - [ ] Article comment UI
     - [ ] practice discussion UI 
     - [ ] IDE UI optimization
     - [ ] User related UI 
+    - [ ] Homepage
     - [ ] SEO optimization
 - [ ] Konten Dasar Javascript
 - [ ] Full backend implementation

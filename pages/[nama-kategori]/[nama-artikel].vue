@@ -28,21 +28,3 @@ console.log(isLatihan);
         ></Ide>
     </div>
 </template>
-
-<style scoped>
-.article-container {
-    max-width: 744px;
-}
-
-.drawer-content {
-    height: auto;
-}
-
-/* cyan 500 */
-.router-link-exact-active {
-    color: #0ea5e9; 
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-</style>
