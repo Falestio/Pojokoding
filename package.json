@@ -11,15 +11,16 @@
     "@nuxtjs/tailwindcss": "^5.1.3",
     "nuxt": "3.0.0-rc.4",
     "@vueuse/core": "^9.1.0",
-    "@vueuse/nuxt": "^9.1.0"
+    "@vueuse/nuxt": "^9.1.0",
+    "@pinia/nuxt": "^0.4.1"
   },
   "dependencies": {
-    "daisyui": "^2.18.0",
-    "utf8": "^3.0.0",
-    "vue-codemirror": "^6.0.2",
     "@codemirror/lang-javascript": "^6.0.2",
     "@codemirror/theme-one-dark": "^6.0.0",
     "base-64": "^1.0.0",
-    "codemirror": "^6.0.1"
+    "codemirror": "^6.0.1",
+    "daisyui": "^2.18.0",
+    "utf8": "^3.0.0",
+    "vue-codemirror": "^6.0.2"
   }
 }

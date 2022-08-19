@@ -1,12 +1,13 @@
 
 <template>
     <div>
-        <div class="navbar h-[7vh] bg-base-100">
+        <div class="navbar h-[7vh] border-b-2 border-gray-100 px-4">
             <div class="flex-1">
-                <a class="text-xl">Pojokoding</a>
+                <a class="text-3xl font-bold">Pojokoding</a>
             </div>
 
             <div class="flex-none">
+                <ToggleTheme></ToggleTheme>
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle">
                         <div class="indicator">
@@ -25,7 +26,7 @@
                 </div>
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                        <div class="w-10 rounded-full">
+                        <div class="w-10 rounded-full bg-gray-100">
                             <img
                                 src="https://avatars.dicebear.com/api/croodles/tio.svg"
                             />

@@ -9,9 +9,11 @@
 
 <template>
   <div>
+    <!-- TODO: Use layout -->
+    <navbar></navbar>
     <div class="con min-h-screen flex flex-col md:pt-24">
       <h1 class="text-5xl font-bold text-center mt-8">
-        Selamat datang di Pojokoding! ingin belajar apa?
+        Tempat belajar Javascript paling oke 👍🏻
       </h1>
 
       <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mt-12">
