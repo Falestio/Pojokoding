@@ -9,8 +9,6 @@
 
 <template>
   <div>
-    <!-- TODO: Use layout -->
-    <navbar></navbar>
     <div class="con min-h-screen flex flex-col md:pt-24">
       <h1 class="text-5xl font-bold text-center mt-8">
         Tempat belajar Javascript paling oke 👍🏻
@@ -20,7 +18,7 @@
         
         <template v-for="kategori in daftarKategori" :key="kategori._id">
           <NuxtLink :to="kategori.artikelPertamaPath" class="block hover:translate-y-1">
-            <div class=" p-4 bg-slate-800 rounded ">
+            <div class=" p-4 bg-base-200 rounded  ">
               <h2 class="text-4xl mb-2">{{kategori.title}}</h2>
 
               <div class="btn btn-sm mr-2 btn-primary text-gray-100">

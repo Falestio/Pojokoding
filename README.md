@@ -15,8 +15,10 @@ Pojokoding is a website to learn programming interactively🌸🍮🍪🍪
     - [ ] Dark/Light
         - [x] Functionality
         - [ ] Coordinate Styles
-    - [ ] Login and Register page
+    - [x] Login and Register page
     - [ ] Payment page
+        - [ ] beli
+        - [ ] bayar
     - [ ] Article comment UI
     - [ ] IDE UI optimization
     - [ ] User related UI 
