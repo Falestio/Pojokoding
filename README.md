@@ -13,6 +13,8 @@ Pojokoding is a website to learn programming interactively🌸🍮🍪🍪
 - [ ] Full frontend implementation
     - [x] Article UI optimization
     - [ ] Dark/Light
+        - [x] Functionality
+        - [ ] Coordinate Styles
     - [ ] Login and Register page
     - [ ] Payment page
     - [ ] Article comment UI
