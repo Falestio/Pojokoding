@@ -11,18 +11,19 @@ Pojokoding is a website to learn programming interactively🌸🍮🍪🍪
 
 - [x] Design system 
 - [ ] Full frontend implementation
-    - [x] Article UI optimization
+    - [] Article UI optimization
     - [ ] Dark/Light
         - [x] Functionality
         - [ ] Coordinate Styles
-    - [ ] Login and Register page
-    - [ ] Payment page
-    - [ ] Article comment UI
-    - [ ] IDE UI optimization
-    - [ ] User related UI 
+    - [x] Login and Register page
+    - [x] Payment page
+        - [x] beli
+        - [x] checkout
+    - [--] Article comment UI
     - [ ] Homepage
-    - [ ] SEO optimization
+    - [ ] User related UI 
     - [ ] practice discussion UI 
+    - [ ] SEO optimization
 - [ ] Konten Dasar Javascript
 - [ ] Full backend implementation
     - [ ] Auth

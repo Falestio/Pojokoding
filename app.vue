@@ -9,7 +9,6 @@ let theme = computed(() => themeStore.currentTheme)
 <template>
     <div :data-theme="theme">
         <NuxtLayout>
-            <h1>{{theme}}</h1>
             <NuxtPage/>
         </NuxtLayout>
     </div>
