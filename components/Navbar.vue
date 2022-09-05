@@ -9,6 +9,7 @@
 
             <div class="flex-none flex gap-4">
                 <ToggleTheme></ToggleTheme>
+                <NuxtLink to="/beli" class="text-xl">Beli</NuxtLink>
                 <NuxtLink to="/masuk" class="text-xl">Masuk</NuxtLink>
                 <NuxtLink to="/daftar" class="text-xl">Daftar</NuxtLink>
                 <div class="dropdown dropdown-end">
