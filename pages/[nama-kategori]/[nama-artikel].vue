@@ -1,0 +1,30 @@
+<script setup>
+
+const route = useRoute()
+const allArticleWithTheSameCategory = await queryContent(`/${route.params.namakategori}`)
+    .only(['_path', 'title','subcategory', '_partial'])
+    .where({_partial: false})
+    .find()
+
+const currentContent = await queryContent(route.path).where({ _partial: false }).findOne()
+const currentContentPath = currentContent._path
+const isLatihan = currentContent.latihan
+console.log(isLatihan);
+
+</script>
+
+<template>
+    <div>
+        <CourseArticle
+            v-if="!isLatihan"
+            :current-article-path="currentContentPath"
+            :all-article-with-the-same-category="allArticleWithTheSameCategory"
+        ></CourseArticle>
+        <Ide
+            v-if="isLatihan"
+            :currentContent="currentContent"
+            :currentContentPath="currentContentPath"
+            :allArticleWithTheSameCategory="allArticleWithTheSameCategory"
+        ></Ide>
+    </div>
+</template>

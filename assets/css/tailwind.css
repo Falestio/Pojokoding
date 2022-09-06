@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p,
+ul,
+li,
+ol {
+    @apply text-gray-100;
+}
+
+p {
+    @apply leading-7;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-800;
+}
+
+.drawer-side .router-link-exact-active {
+    @apply text-pink-400;
+}
+
+.article {
+    max-width: 768px;
+}
+
+.article > * {
+    @apply mb-8;
+}
+
+.article p {
+    @apply leading-7;
+}
+
+.article h1 {
+    @apply text-5xl font-bold mb-6;
+}
+
+.article h2 a {
+    @apply text-4xl font-bold;
+}
+
+.article h3 a {
+    @apply text-3xl font-bold;
+}
+
+.article h4 a {
+    @apply text-2xl font-bold;
+}
+
+.article h5 a {
+    @apply text-xl uppercase underline;
+}
+
+.article h6 a {
+    @apply text-lg font-bold uppercase underline;
+}
+
+.article p,
+ul,
+li {
+    @apply mb-3 text-xl;
+}
+
+.article li {
+    @apply list-disc;
+}
+
+.article hr {
+    @apply mb-6;
+}
+
+.article p a {
+    @apply underline text-pink-400;
+}
+
+.article pre {
+    @apply bg-slate-800 p-4 rounded;
+}
+
+.article p strong {
+    @apply text-pink-400;
+}
+
+.article p code,
+li code {
+    @apply text-pink-400 bg-slate-800 p-1;
+}
