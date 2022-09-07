@@ -1,39 +1,37 @@
 <script setup>
-
-  // daftar semua konten, termasuk info kategori, subcategory, dan artikel
-  const daftarKategori = await queryContent("/")
-    .where({ info: true })
-    .find();
-
+definePageMeta({
+    layout: "plain",
+});
 </script>
 
 <template>
-  <div>
-    <div class="con min-h-screen flex flex-col md:pt-24">
-      <h1 class="text-5xl font-bold text-center mt-8">
-        Tempat belajar Javascript paling oke 👍🏻
-      </h1>
-
-      <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mt-12">
-        
-        <template v-for="kategori in daftarKategori" :key="kategori._id">
-          <NuxtLink :to="kategori.artikelPertamaPath" class="block hover:translate-y-1">
-            <div class=" p-4 bg-base-200 rounded  ">
-              <h2 class="text-4xl mb-2">{{kategori.title}}</h2>
-
-              <div class="btn btn-sm mr-2 btn-primary text-gray-100">
-                {{kategori.totalArtikel}} Artikel
-              </div>
-
-              <div class="btn btn-sm btn-primary text-gray-100">
-                {{kategori.totalProyek}} Proyek
-              </div>
+    <div>
+        <div class="con min-h-screen flex flex-col md:pt-24">
+            <h1 class="text-5xl font-bold text-center mt-8">Pojokoding</h1>
+            <h2 class="text-3xl font-bold text-center mt-8">Tempat belajar Javascript paling oke 👍🏻</h2>
+            <div class="flex gap-3 justify-center my-8">
+              <button class="btn btn-outline">Login</button>
+              <button class="btn btn-outline">Daftar</button>
+              <button class="btn btn-outline">Beli</button>
             </div>
-          </NuxtLink>
-        </template>
-        
-      </div>
+            
+            <div class="flex flex-col gap-6">
+                <div class="card flex max-w-xl flex-col gap-4 border-2 mx-auto">
+                    <div class="card-body">
+                        <p class="text-xl font-bold">Pemula</p>
+                        <h2 class="text-4xl font-bold">Dasar-Dasar Javascript</h2>
+                        <div class="flex gap-3">
+                          <div class="badge badge-lg">31 Artikel</div>
+                          <div class="badge badge-lg">42 Latihan</div>
+                          <div class="badge badge-lg">7 Proyek</div>
+                        </div>
+                        <p class="text-lg">
+                            Lorem ipsum dolor sit ame dolore ratione! Sequi molestias itaque distinctio similique asperiores aspernatur
+                            ipsum soluta esse!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
 </template>
