@@ -5,6 +5,9 @@
     .where({ info: true })
     .find();
 
+const user = useCurrentUser()
+console.log(user.value)
+
 </script>
 
 <template>

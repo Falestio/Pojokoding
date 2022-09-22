@@ -1,3 +1,13 @@
+<script setup>
+    import { signOut } from 'firebase/auth'
+    const { $auth } = useNuxtApp()
+
+    const handleLogout = () => {
+        signOut($auth)
+            .then(() => console.log("Logout Success"))
+            .catch((err) => console.log(err))
+    }
+</script>
 
 <template>
     <div>
@@ -31,7 +41,7 @@
                             </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li @click="handleLogout()"><a>Logout</a></li>
                     </ul>
                 </div>
             </div>

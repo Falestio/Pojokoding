@@ -1,4 +1,6 @@
 <script setup>
+import { signInWithEmailAndPassword } from 'firebase/auth'
+
 // TODO: can we use v-if?
 let showOptions = ref(false)
 let showEmailAndPassword = ref(true)
@@ -6,6 +8,25 @@ let showEmailAndPassword = ref(true)
 const toggleForm = () => {
     showOptions.value = !showOptions.value
     showEmailAndPassword.value = !showEmailAndPassword.value
+}
+
+const { $auth } = useNuxtApp() 
+const router = useRouter()
+const currentUser = useCurrentUser()
+
+let email = ref(null)
+let password = ref(null)
+
+const loginUser = () => {
+    signInWithEmailAndPassword($auth, email.value, password.value)
+        .then((userCredential) => {
+            currentUser.value = userCredential
+            console.log("Login Success",userCredential)
+            router.push({ path:"/dashboard" })
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 }
 
 </script>
@@ -37,8 +58,8 @@ const toggleForm = () => {
 
                 <div class="card-body">
                     <div class="flex flex-col gap-6">
-                        <input type="text" placeholder="Email" class="input input-lg input-bordered w-full max-w-xs" />
-                        <input type="text" placeholder="Password" class="input input-lg input-bordered w-full max-w-xs" />
+                        <input type="text" placeholder="Email" class="input input-lg input-bordered w-full max-w-xs" v-model="email" />
+                        <input type="text" placeholder="Password" class="input input-lg input-bordered w-full max-w-xs" v-model="password"/>
                         <div class="flex justify-between">
                             <div class="flex items-center gap-2">
                                 <input type="checkbox" class="toggle toggle-sm" />
@@ -46,7 +67,7 @@ const toggleForm = () => {
                             </div>
                             <NuxtLink class="link">Lupa Password?</NuxtLink>
                         </div>
-                        <button class="btn btn-primary">Masuk</button>
+                        <button class="btn btn-primary" @click="loginUser()">Masuk</button>
                     </div>
                 </div>
             </div>
