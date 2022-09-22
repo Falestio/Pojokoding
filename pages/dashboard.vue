@@ -3,7 +3,7 @@ definePageMeta({
     middleware: ['protected']
 })
 
-const user = useCurrentUser()
+const user = useCurrentUser() 
 </script>
 
 <template>

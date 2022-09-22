@@ -1,13 +1,11 @@
 <script setup>
-
-  // daftar semua konten, termasuk info kategori, subcategory, dan artikel
-  const daftarKategori = await queryContent("/")
-    .where({ info: true })
-    .find();
+// daftar semua konten, termasuk info kategori, subcategory, dan artikel
+const daftarKategori = await queryContent("/")
+  .where({ info: true })
+  .find();
 
 const user = useCurrentUser()
 console.log(user.value)
-
 </script>
 
 <template>

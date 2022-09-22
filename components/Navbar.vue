@@ -1,10 +1,14 @@
 <script setup>
     import { signOut } from 'firebase/auth'
     const { $auth } = useNuxtApp()
+    const currentUser = useCurrentUser()
 
     const handleLogout = () => {
         signOut($auth)
-            .then(() => console.log("Logout Success"))
+            .then(() => {
+                console.log("Logout Success")
+                currentUser = null
+            })
             .catch((err) => console.log(err))
     }
 </script>
@@ -19,6 +23,7 @@
 
             <div class="flex-none flex gap-4">
                 <ToggleTheme></ToggleTheme>
+                <div v-if="currentUser">{{currentUser.user?.uid}}</div>
                 <NuxtLink to="/beli" class="text-xl">Beli</NuxtLink>
                 <NuxtLink to="/masuk" class="text-xl">Masuk</NuxtLink>
                 <NuxtLink to="/daftar" class="text-xl">Daftar</NuxtLink>

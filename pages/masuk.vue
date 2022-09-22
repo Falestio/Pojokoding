@@ -15,7 +15,7 @@ const router = useRouter()
 const currentUser = useCurrentUser()
 
 let email = ref(null)
-let password = ref(null)
+let password = ref(null) 
 
 const loginUser = () => {
     signInWithEmailAndPassword($auth, email.value, password.value)
