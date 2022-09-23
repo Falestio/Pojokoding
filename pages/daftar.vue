@@ -1,5 +1,5 @@
 <script setup>
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 // TODO: can we use v-if?
 let showOptions = ref(false);
@@ -10,29 +10,53 @@ const toggleForm = () => {
     showEmailAndPassword.value = !showEmailAndPassword.value;
 };
 
-const { $auth } = useNuxtApp()
-const router = useRouter()
-let currentUser = useCurrentUser() 
+const { $auth } = useNuxtApp();
+const router = useRouter();
+let currentUser = useCurrentUser();
 
 let username = ref(null);
 let email = ref(null);
 let password = ref(null);
 
 const registerUser = () => {
-    console.log($auth)
+    console.log($auth);
     createUserWithEmailAndPassword($auth, email.value, password.value)
         .then((userCredential) => {
-            currentUser.value = userCredential
-            console.log("Register success", userCredential)
-            router.push({ path: "/dashboard" })
+            currentUser.value = userCredential;
+            console.log("Register success", userCredential);
+            router.push({ path: "/dashboard" });
         })
         .catch((err) => {
-            console.log(err)
-        })
+            console.log(err);
+        });
 };
 
+const provider = new GoogleAuthProvider();
 
+provider.addScope("https://www.googleapis.com/auth/userinfo.email");
+provider.addScope("https://www.googleapis.com/auth/userinfo.profile");
 
+const registerUserGoogle = () => {
+    signInWithPopup($auth, provider)
+        .then((result) => {
+            // This token used if we want to fetch aditional data using the Google API
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            currentUser.value = result.user;
+            router.push({path:'/dashboard'})
+        })
+        .catch(() => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+        });
+};
 </script>
 
 <template>
@@ -44,7 +68,7 @@ const registerUser = () => {
                 </div>
 
                 <div class="card-body">
-                    <button class="btn btn-primary btn-outline gap-2">Google <i class="bx bxl-google"></i></button>
+                    <button class="btn btn-primary btn-outline gap-2" @click="registerUserGoogle()">Google <i class="bx bxl-google"></i></button>
                     <button class="btn btn-primary btn-outline gap-2">Facebook <i class="bx bxl-facebook-square"></i></button>
                     <button @click="toggleForm()" class="btn btn-primary btn-outline gap-2">
                         Email & Password <i class="bx bxs-key"></i>
@@ -76,12 +100,19 @@ const registerUser = () => {
 
                 <div class="card-body">
                     <div class="flex flex-col gap-6">
-                        <input v-model="username"
-                        type="text" placeholder="Nama tampilan" class="input input-lg input-bordered w-full max-w-xs" />
-                        <input v-model="email"
-                        type="text" placeholder="Email" class="input input-lg input-bordered w-full max-w-xs" />
-                        <input v-model="password"
-                        type="text" placeholder="Password" class="input input-lg input-bordered w-full max-w-xs" />
+                        <input
+                            v-model="username"
+                            type="text"
+                            placeholder="Nama tampilan"
+                            class="input input-lg input-bordered w-full max-w-xs"
+                        />
+                        <input v-model="email" type="text" placeholder="Email" class="input input-lg input-bordered w-full max-w-xs" />
+                        <input
+                            v-model="password"
+                            type="text"
+                            placeholder="Password"
+                            class="input input-lg input-bordered w-full max-w-xs"
+                        />
                         <button class="btn btn-primary" @click="registerUser()">Daftar</button>
                     </div>
                 </div>

@@ -20,6 +20,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     const db = getFirestore(app);
     const auth = getAuth(app);
 
+    auth.useDeviceLanguage()
+
     nuxtApp.provide("firebaseApp", app);
     nuxtApp.provide("db", db);
     nuxtApp.provide("auth", auth);

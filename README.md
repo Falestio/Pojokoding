@@ -7,35 +7,54 @@ Pojokoding is a website to learn programming interactively🌸🍮🍪🍪
 - Text-based programming content 
 - interactive coding exercise
 
-## Roadmap - 30 September - Pojokoding 1.0.0
+## Roadmap Pojokoding 1.0.0
 
-- [x] Design system 
-- [ ] Full frontend implementation
-    - [] Article UI optimization
-    - [ ] Dark/Light
-        - [x] Functionality
-        - [ ] Coordinate Styles
-    - [x] Login and Register page
-    - [x] Payment page
-        - [x] beli
-        - [x] checkout
-    - [--] Article comment UI
-    - [ ] Homepage
-    - [ ] User related UI 
-    - [ ] practice discussion UI 
-    - [ ] SEO optimization
-- [ ] Konten Dasar Javascript
-- [ ] Full backend implementation
-    - [ ] Auth
-    - [ ] User progress
-    - [ ] Payment
-    - [ ] Article comment
-    - [ ] Practice discussion
-- [ ] IDE
-    - [x] Handle API Request
-    - [x] Solution
-    - [ ] Testing
-    - [ ] Completion
+tgl 20 - daftar & login email dan password 
+  - [x] redirect when succeed 
+
+tgl 21 - user sessions
+  - [x] Watch for user state change
+  - [x] access current user data
+  - [x] Navbar UI changes
+  - [x] protect dashboard route
+
+tgl 22 - daftar & login google
+  -  [ ] Google provider (70%) (redirect and show user data)
+
+tgl 23 - Setup sanity & Setup project documentation
+  - [x] Install Markdown
+  - [x] install Orderable document list
+  - [x] Define Article & latihan Schemas
+  - [x] Define Courses Schemas (category)
+  - Create docs file to document
+
+tgl 24 - fetch blog
+  - Interact with API
+  - Style post
+
+tgl 25 - komentar dan reply post
+  - create model
+  - UI
+  - Post komentar
+  - Get komentar
+  - Post reply
+  - Get reply
+
+tgl 27 - halaman latihan
+
+tgl 28 - diskusi latihan 
+
+tgl 29 - support page
+
+tgl 30 - setup xendit donation page
+
+tgl 1 - sertifikat
+
+tgl 2 - forget password, email verification, auth error handling
+
+tgl 3 - user progress
+
+tgl 4 - finalization
 
 ## Future Plan
 
