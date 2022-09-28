@@ -21,6 +21,7 @@
     "codemirror": "^6.0.1",
     "daisyui": "^2.18.0",
     "firebase": "^9.10.0",
+    "lodash": "^4.17.21",
     "utf8": "^3.0.0",
     "vue-codemirror": "^6.0.2"
   }
