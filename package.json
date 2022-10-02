@@ -22,7 +22,9 @@
     "daisyui": "^2.18.0",
     "firebase": "^9.10.0",
     "lodash": "^4.17.21",
+    "marked": "^4.1.0",
     "utf8": "^3.0.0",
-    "vue-codemirror": "^6.0.2"
+    "vue-codemirror": "^6.0.2",
+    "vue-markdown-render": "^2.0.0"
   }
 }
